@@ -18,16 +18,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="scroll-smooth dark">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${outfit.className} ${ovo.className} antialiased leading-8 overflow-x-hidden dark:bg-darkTheme dark:text-white`}>
         {children}
-        <button onClick={toggleDarkMode}>Toggle Dark Mode</button>
       </body>
     </html>
   );
-}
-
-function toggleDarkMode() {
-  document.documentElement.classList.toggle('dark');
 }
